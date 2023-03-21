@@ -1,0 +1,18 @@
+@media screen and (min-width: 480px) {
+   
+    .container {
+      max-width: 428px;
+    }
+     
+    .modal {
+      width: 392px;
+    }
+    
+    .check-text {
+      justify-content: flex-start;
+    }
+    
+    .team-container {
+      max-width: 296px;
+    }
+    }
