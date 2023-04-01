@@ -1,22 +1,29 @@
 @media screen and (min-width: 480px) {
-   
-    .container {
-      max-width: 428px;
-    }
-     
-    .modal {
-      width: 392px;
-    }
-    
-    .check-text {
-      justify-content: flex-start;
-    }
-    
-    .team-container {
-      max-width: 296px;
-    }
+  .container {
+    max-width: 428px;
+  }
 
-    .portfolio-container{
-      min-width: 428px;
-    }
-    }
+  .mobile-menu-phone {
+    font-size: 36px;
+  }
+  
+  .soc-list {
+    gap: 56px;
+  }
+
+  .modal {
+    width: 392px;
+  }
+
+  .check-text {
+    justify-content: flex-start;
+  }
+
+  .team-container {
+    max-width: 296px;
+  }
+
+  .portfolio-container {
+    min-width: 428px;
+  }
+}

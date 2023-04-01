@@ -1,189 +1,202 @@
 @media screen and (min-width: 768px) {
-    .container {
-         max-width: 768px;
-     }
-   
-   /*----------------------------- HEADER */
-   .header-menu{
+  .container {
+    max-width: 768px;
+  }
+
+  /*----------------------------- HEADER */
+  .header-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-menu {
     display: none;
-  } 
-   
-   .header-navigation {
-         display: flex;
-         align-items: center;
+  }
+
+  .header-list {
+    display: flex;
+    gap: 40px;
+    margin-left: 120px;
+  }
+
+  .header-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    display: block;
+    padding: 24px 0;
+    color: var(--main-title-color);
+    transition: color 250ms var(--transition-timing-function);
+  }
+
+  .header-link.active {
+    color: var(--hover-focus-color);
+  }
+
+  .header-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--hover-focus-color);
+  }
+
+  .active::after {
+    display: block;
+  }
+
+  .header-link:is(:hover, :focus) {
+    color: var(--hover-focus-color);
+  }
+
+  .address {
+    display: block;
+    margin-left: auto;
+  }
+
+  .header-address {
+    display: block;
+    font-style: normal;
+    font-size: 12px;
+    line-height: calc(4 / 3);
+    letter-spacing: 0.04em;
+    padding-bottom: 4px;
+    color: inherit;
+    transition: color 250ms var(--transition-timing-function);
+  }
+
+  .header-address:is(:hover, :focus) {
+    color: var(--hover-focus-color);
+  }
+
+  /* -----------------------------------HERO */
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-tablet-1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-tablet-2x.jpg);
     }
-   
-     .header-list {
-         display: flex;
-         gap: 40px;
-         margin-left: 120px;
-     }
-       
-     .header-link {
-         position: relative;
-         font-weight: 500;
-         font-size: 16px;
-         line-height: 1.5;
-         letter-spacing: 0.02em;
-         display: block;
-         padding: 24px 0;
-         color: var(--main-title-color);
-         transition: color 250ms var(--transition-timing-function);
-     }
-       
-     .header-link.active {
-       color: var(--hover-focus-color);
-     }
-       
-     .header-link::after {
-         content: '';
-         position: absolute;
-         bottom: 0;
-         left: 0;
-       
-         display: none;
-         width: 100%;
-         height: 4px;
-         border-radius: 2px;
-         background-color: var(--hover-focus-color);
-     }
-        
-     .active::after {
-         display: block;
-     }
-       
-     .header-link:is(:hover, :focus) {
-         color: var(--hover-focus-color);
-     }
-       
-     .address {
-       display: block;
-       margin-left: auto;
-     }
-       
-     .address-list {
-         display: flex;
-         flex-direction: column;
-         margin-left: auto;
-     }
-       
-     .header-address {
-         display: block;
-         font-style: normal;
-         font-size: 12px;
-         line-height: calc(4 / 3);
-         letter-spacing: 0.04em;
-         padding-bottom: 4px;
-         color: inherit;
-         transition: color 250ms var(--transition-timing-function);
-     }
-       
-     .header-address:is(:hover, :focus) {
-         color: var(--hover-focus-color);
-     }
-   
-   /* -----------------------------------HERO */
-   .hero-title {
-     font-size: 56px;
-     line-height: calc(60 / 56);
-     width: 496px;
-     margin-bottom: 40px;
-   }
-   
-   .modal {
-     width: 408px;
-   }
-   
-   /* ----------------------section FEATURES */
-   .features-container {
-     width: 100%;
-   }
-   
-   .features-item {
-     width: calc((100% - 24px) / 2);
-   }
-   
-   .features-subtitle {
-     display: block;
-   }
-   
-   /* -------------------------section TEAM */
-   .team-container {
-     max-width: 584px;
-   }    
-   
-   .team-list {
-     column-gap: 24px;
-     row-gap: 64px;
-   }
-   
-   .team-card {
-     width: calc((100% - 24px) / 2);
-   }
-   /* --------------------------------CUSTOMERS*/
-   
-   .customer-container {
-     max-width: 584px;
-   }
-   
-   .customers-list {
-     column-gap: 24px;
-   }
-   
-   .customer-item {
-     width: 168px;
-   }
-   
-   /* ------------------------------FOOTER */
-   
-   .footer {
-     background-color: var(--hero-footer-color);
-     padding-top: 96px;
-     padding-bottom: 96px;
-   
-   }
-    
-   .footer-container {
-    display: flex; 
-     flex-wrap: wrap;
-     gap: 72px 24px;
-     align-items: flex-start;
+  }
+
+  .hero-title {
+    font-size: 56px;
+    line-height: calc(60 / 56);
+    width: 496px;
+    margin-bottom: 40px;
+  }
+
+  .modal {
+    width: 408px;
+  }
+
+  /* ----------------------section FEATURES */
+  .features-container {
+    width: 100%;
+  }
+
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .features-subtitle {
+    display: block;
+  }
+
+  /* -------------------------section TEAM */
+  .team-container {
     max-width: 584px;
-    }
-   
-   .footer-info {
-   align-items: flex-start;
-   margin-bottom: 0;
-   }
-   
-   .footer-soc {
-     align-items: flex-start;  
-     margin-left: 24px;
-     margin-bottom: 0;
-   }
-   
-   .sending {
-     align-items: flex-start;
-   }
-   
-   .sending-wrap {
-     display: flex;
-     flex-direction: row;
-     align-items: flex-start;
-   }
-   
-   .sending-input {
-     width: 264px;
-     margin-bottom: 0;
-   }
-   
-   .sending-btn {
-     margin-left: 24px;
-   }
-   
-   /* ---------------------------------PORTFOLIO -- */
-   .portfolio{
-      padding-top: 64px;
+  }
+
+  .team-list {
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .team-card {
+    width: calc((100% - 24px) / 2);
+  }
+  /* --------------------------------CUSTOMERS*/
+
+  .customer-container {
+    max-width: 584px;
+  }
+
+  .customers-list {
+    column-gap: 24px;
+  }
+
+  .customer-item {
+    width: 168px;
+  }
+
+  /* ------------------------------FOOTER */
+
+  .footer {
+    background-color: var(--hero-footer-color);
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    align-items: flex-start;
+    max-width: 584px;
+  }
+
+  .footer-info {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .footer-soc {
+    align-items: flex-start;
+    margin-left: 24px;
+    margin-bottom: 0;
+  }
+
+  .sending {
+    align-items: flex-start;
+  }
+
+  .sending-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .sending-input {
+    width: 264px;
+    margin-bottom: 0;
+  }
+
+  .sending-btn {
+    margin-left: 24px;
+  }
+
+  /* ---------------------------------PORTFOLIO -- */
+  .portfolio {
+    padding-top: 64px;
   }
 
   .filter-list {
@@ -196,4 +209,12 @@
     padding: 12px 24px;
   }
 
+  .examples-list {
+    justify-content: start;
+    gap: 72px 24px;
   }
+
+  .examples-item {
+    width: calc((100% - 24px) / 2);
+  }
+}

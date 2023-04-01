@@ -9,13 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/mobile.css" />
     <link rel="stylesheet" href="./styles/tablet.css" />
@@ -29,6 +31,11 @@
           <a class="header-logo link" href="./index.html">
             <span class="logo-one">Web</span>Studio</a
           >
+          <button type="button" class="header-menu js-open-menu">
+            <svg class="icon-menu" width="32" height="22">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
           <ul class="header-list list">
             <li class="header-item">
               <a class="header-link link active" href="./index.html">Studio</a>
@@ -41,18 +48,6 @@
             </li>
           </ul>
         </nav>
-        <button type="button" class="header-menu" data-modal-open>
-          <svg class="icon-menu" width="32" height="22">
-            <use href="./images/icons.svg#icon-menu"></use>
-          </svg>
-        </button>
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <button type="button" class="modal-close-btn" data-modal-close>
-              <svg class="icon-close" width="8" height="8">
-                <use href="./images/icons.svg#icon-close"></use>
-              </svg>
-            </button>
         <address class="address">
           <ul class="address-list list">
             <li class="address-item">
@@ -68,7 +63,79 @@
           </ul>
         </address>
       </div>
+      <div class="js-menu-container">
+        <div>
+        <button type="button" class="js-close-menu">
+          <svg width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+          <ul class="mobile-navigation list">
+            <li class="mobile-navigation-item">
+              <a class="mobile-navigation-link link" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mobile-navigation-item">
+              <a class="mobile-navigation-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mobile-navigation-item">
+              <a class="mobile-navigation-link link active" href="">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+            <ul class="mobile-menu-address-list list">
+              <li class="mobile-menu-address-item">
+                <a class="mobile-menu-phone link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-menu-address-item">
+                <a
+                  class="mobile-menu-mail link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="soc-list list">
+              <li class="soc-item">
+                <a href="" class="soc-link link">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a href="" class="soc-link link">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a href="" class="soc-link link">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a href="" class="soc-link link">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+        </div>
+        </div>
     </header>
+
     <main>
       <!-------------------------------------HERO-->
       <section class="hero">
@@ -98,7 +165,8 @@
                 name="name"
                 id="name"
                 required
-                minlength="2" />
+                minlength="2"
+              />
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-name"></use>
               </svg>
@@ -112,7 +180,8 @@
                 name="tel"
                 id="tel"
                 required
-                minlength="10" />
+                minlength="10"
+              />
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
@@ -131,12 +200,14 @@
               name="comment"
               id="comment"
               class="modal-textarea"
-              placeholder="Text input"></textarea>
+              placeholder="Text input"
+            ></textarea>
             <input
               type="checkbox"
               id="policy"
               value="true"
-              class="input-check visually-hidden" />
+              class="input-check visually-hidden"
+            />
             <label for="policy" class="check-text">
               <span class="checkbox">
                 <svg class="icon-check" width="10" height="8">
@@ -214,24 +285,36 @@
           <ul class="activity-list list">
             <li class="activity-item">
               <img
+                srcset="./images/monitor.jpg 1x, ./images/monitor-2x.jpg 2x"
                 src="./images/monitor.jpg"
                 alt="Monitor"
                 width="360"
-                height="300" />
+                height="300"
+              />
             </li>
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/phonescreen.jpg    1x,
+                  ./images/phonescreen-2x.jpg 2x
+                "
                 src="./images/phonescreen.jpg"
                 alt="Phone and three screen"
                 width="360"
-                height="300" />
+                height="300"
+              />
             </li>
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/laptopandphone.jpg    1x,
+                  ./images/laptopandphone-2x.jpg 2x
+                "
                 src="./images/laptopandphone.jpg"
                 alt="Laptop and phone in hand"
                 width="360"
-                height="300" />
+                height="300"
+              />
             </li>
           </ul>
         </div>
@@ -244,10 +327,15 @@
           <ul class="team-list list">
             <li class="team-card">
               <img
+                srcset="
+                  ./images/markguerrero.jpg    1x,
+                  ./images/markguerrero-2x.jpg 2x
+                "
                 src="./images/markguerrero.jpg"
                 alt="Photo by Mark Guerrero"
                 width="264"
-                height="260" />
+                height="260"
+              />
               <div class="card-info">
                 <h3 class="team-name">Mark Guerrero</h3>
                 <p class="team-specialty">Product Designer</p>
@@ -285,10 +373,12 @@
             </li>
             <li class="team-card">
               <img
+                srcset="./images/tomford.jpg 1x, ./images/tomford-2x.jpg 2x"
                 src="./images/tomford.jpg"
                 alt="Photo by Tom Ford"
                 width="264"
-                height="260" />
+                height="260"
+              />
               <div class="card-info">
                 <h3 class="team-name">Tom Ford</h3>
                 <p class="team-specialty">Frontend Developer</p>
@@ -326,10 +416,15 @@
             </li>
             <li class="team-card">
               <img
+                srcset="
+                  ./images/camilagarcia.jpg    1x,
+                  ./images/camilagarcia-2x.jpg 2x
+                "
                 src="./images/camilagarcia.jpg"
                 alt="Photo by Camila Garcia"
                 width="264"
-                height="260" />
+                height="260"
+              />
               <div class="card-info">
                 <h3 class="team-name">Camila Garcia</h3>
                 <p class="team-specialty">Marketing</p>
@@ -367,10 +462,15 @@
             </li>
             <li class="team-card">
               <img
+                srcset="
+                  ./images/danielwilson.jpg    1x,
+                  ./images/danielwilson-2x.jpg 2x
+                "
                 src="./images/danielwilson.jpg"
                 alt="Photo by Daniel Wilson"
                 width="264"
-                height="260" />
+                height="260"
+              />
               <div class="card-info">
                 <h3 class="team-name">Daniel Wilson</h3>
                 <p class="team-specialty">UI Designer</p>
@@ -513,7 +613,8 @@
                 class="sending-input"
                 type="email"
                 name="email"
-                placeholder="E-mail" />
+                placeholder="E-mail"
+              />
               <button type="submit" class="sending-btn">
                 Subscribe<svg class="sending-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-send"></use>
@@ -525,5 +626,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
